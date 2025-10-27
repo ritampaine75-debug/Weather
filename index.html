@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="manifest" href="manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Search Section -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for a city..." autocomplete="off">
+            <ul id="suggestionsList" class="suggestions-list"></ul>
+        </div>
+        
+        <!-- Loading and Error Messages -->
+        <div id="loader" class="message-container hidden">Loading...</div>
+        <div id="error" class="message-container hidden"></div>
+
+        <!-- Weather Display Area -->
+        <div id="weatherContainer" class="weather-container hidden">
+            <!-- Current Weather -->
+            <div id="currentWeather" class="card current-weather-card">
+                <!-- Data will be injected by JavaScript -->
+            </div>
+            
+            <!-- Details: Wind and Humidity -->
+            <div id="weatherDetails" class="card details-card">
+                <!-- Data will be injected by JavaScript -->
+            </div>
+
+            <!-- Forecast -->
+            <div id="forecast" class="card forecast-card">
+                <h3>5-Day Forecast</h3>
+                <div id="forecastGrid" class="forecast-grid">
+                    <!-- Data will be injected by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Google Weather Link -->
+            <div class="google-link-container">
+                <a id="googleWeatherLink" href="#" target="_blank" class="google-link">
+                    Check on Google Weather for more details ↗
+                </a>
+            </div>
+        </div>
+
+        <div id="welcomeMessage" class="welcome-message">
+            <h1>Welcome to ritam's Weather App</h1>
+            <p>Search for a city to get started</p>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript files -->
+    <script src="js/api.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
